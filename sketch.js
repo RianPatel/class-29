@@ -1,11 +1,12 @@
-const Engine = Matter.Engine;
+//NameSpacing - nicknames to bigger names
+const Engine = Matter.Engine; //Universe
 const World= Matter.World;
-const Bodies = Matter.Bodies;
+const Bodies = Matter.Bodies;   //Objects
 
-var engine, world;
+var engine, world;  //To control our world & universe, we create them as variables
 var box1, pig1;
 var backgroundImg,platform;
-
+var sling
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
 }
@@ -35,21 +36,18 @@ function setup(){
     log5 = new Log(870,120,150, -PI/7);
 
     bird = new Bird(100,100);
+    sling= new Slingshot(bird.body,{x:200,y:50})
 
 }
 
 function draw(){
     background(backgroundImg);
     Engine.update(engine);
-    console.log(box2.body.position.x);
-    console.log(box2.body.position.y);
-    console.log(box2.body.angle);
     box1.display();
     box2.display();
     ground.display();
     pig1.display();
     log1.display();
-
     box3.display();
     box4.display();
     pig3.display();
@@ -61,4 +59,28 @@ function draw(){
 
     bird.display();
     platform.display();
+    sling.display();
+
 }
+
+/*
+lowercase - catwoman
+uppercase - CATWOMAN
+camelCase - catWoman
+*/
+function mouseDragged(){
+    //bird follows the mouse (mouseX & mouseY)
+    Matter.Body.setPosition(bird.body, {x:mouseX,y:mouseY})
+
+}
+function mouseReleased(){
+  //bird flies off   - disconnect the bird & the sling
+  sling.fly();
+}
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+Language - JAVASCRIPT - JS
+
+OBJECT ORIENTED PROGRAMMING - OOP
+ - We look at the elements of the code as real world objects
+
+ Real - world objects:
+    - Has 2 things:
+        1. Properties - features, characteristics, what does it look like
+        2. Functions - uses, what does it do
+
+    - Creation process:
+        1. Designing the object                 --> CLASS
+            - properties & Functions
+        2. Creating the object using properties
+        3. Used whenever needed
+
+
+CLASS
+    - Design/blueprint of the object
+    - Properties --> constructor()
+
+
+    Step 1 : Design of the bottle
+    class Bottle{
+        constructor(){
+            this.radius = 20;
+            this.height = 50;
+            this.color = "silver"
+        }
+
+        storing(){
+            Stores any liquid
+        }
+    }
+
+    this --> keyword that refers to the object (that will be created in the future)
+
+    Step 2: Creating the bottle
+
+    var bottle1; --> creates a variable to store the bottle properties
+
+    bottle1 = new Bottle(); --> new - new object
+
+
+
+LIBRARIES 
+    - store pre-defined functions & variable & classes
+    - p5.js & matter.js
+    - p5.js has a class called Sprites
+    
+    MATTER.JS
+        PHYSICS ENGINE
+            - the objects created in matter.js follow the laws of PHYSICS
+
+        1. Universe - contains many worlds - Follows all the laws of physics
+        2. World    - contains many objects - Can have different levels of intensity
+        3. Objects
+
+
+INHERITANCE
+    Parent --> Children
+    Base Class (super) --> Sub Classes
+    Advantage:
+        1. reusing the same code again & again
+        2. Saving space by writing less lines of code

@@ -4,4 +4,6 @@ class Box extends BaseClass {
     this.image = loadImage("sprites/wood1.png");
   }
 
+  //No need of display() because it is exactly the same as in Base Class
+
 };
